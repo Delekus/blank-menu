@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Blank Menu</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			/*font-family: 'Roboto', sans-serif;*/
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			background-color: #808080;
+		}
+
+		h1 {
+			color: white;
+			text-align: center;
+			margin: 25px;
+			font-weight: normal;
+			font-size: 36px;
+		}
+
+		.menu_list {
+			list-style: none;
+			margin: 25px 50px;
+			padding: 0;
+			background-color: #2d2d2d;
+			height: 48px;
+		}
+
+		.menu_item {
+			display: inline-block;
+		}
+
+		.menu_link {
+			display: block;
+			text-decoration: none;
+			color: white;
+			font-weight: 600;
+			min-width: 80px;
+			text-align: center;
+			padding: 15px 15px;
+			padding-left: 55px;
+		}
+
+		.menu_link_logo_size {
+			background-repeat: no-repeat;
+			background-size: 40px;
+			background-position: 10px 4px;
+		}
+
+		.menu_link_logo_main {
+			background-image: url(img/icon_home.png);
+		}
+
+		.menu_link_logo_about-us {
+			background-image: url(img/icon_about.png);
+		}
+
+		.menu_link_logo_porfolio {
+			background-image: url(img/icon_portfolio.png);
+		}
+
+		.menu_link_logo_blog {
+			background-image: url(img/icon_blog.png);
+		}
+
+		.menu_link_logo_contacts {
+			background-image: url(img/icon_contacts.png);
+		}
+
+		.menu_link:hover {
+			background-color: #336699;
+		}
+
+		/*Подменю пункта Главная*/
+		li>ul {
+			display: none;
+			position: relative;
+		}
+
+		li:hover>ul {
+			display: block;
+			position: absolute;
+		}
+
+		.sub-menu_list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.sub-menu_link {
+			display: block;
+			text-decoration: none;
+			color: gray;
+			padding: 15px 15px;
+			background-color: white;
+			min-width: 120px;
+		}
+
+		.sub-menu_link:hover {
+			border-left: 5px solid #336699;
+			background-color: #c6c6c6;
+			padding: 15px 10px;
+		}
+		ul.sub-menu_list > li > ul {
+			top: 48px;
+			left: 150px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Много-уровневое горизонтальное меню</h1>
+	<div class="menu">
+		<ul class="menu_list">
+			<li class="menu_item"><a class="menu_link menu_link_logo_size menu_link_logo_main" href="#">Главная</a>
+				<ul class="sub-menu_list">
+					<li><a class="sub-menu_link" href="#">Подменю 1</a></li>
+					<li><a class="sub-menu_link" href="#">Подменю 2</a></li>
+					<li><a class="sub-menu_link" href="#">Подменю 3</a></li>
+				</ul>
+			</li>
+			<li class="menu_item"><a class="menu_link menu_link_logo_size menu_link_logo_about-us" href="#">О нас</a></li>
+			<li class="menu_item"><a class="menu_link menu_link_logo_size menu_link_logo_porfolio" href="#">Портфолио</a>
+				<ul class="sub-menu_list">
+					<li><a class="sub-menu_link" href="#">Подменю 1</a></li>
+					<li><a class="sub-menu_link" href="#">Уровень 3 меню</a>
+						<ul class="sub-menu_list sub-menu_list_lvl3">
+							<li><a class="sub-menu_link" href="#">Подменю 4</a></li>
+							<li><a class="sub-menu_link" href="#">Подменю 5</a></li>
+							<li><a class="sub-menu_link" href="#">Подменю 6</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="menu_item"><a class="menu_link menu_link_logo_size menu_link_logo_blog" href="#">Блог</a></li>
+			<li class="menu_item"><a class="menu_link menu_link_logo_size menu_link_logo_contacts" href="#">Контакты</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+
+
+</html>
